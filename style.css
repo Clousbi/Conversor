@@ -1,0 +1,49 @@
+*{
+margin: 0;
+padding: 0;
+border: 0;
+}
+body{
+    background-color: #11151C;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.hd h1{
+    text-align: center;
+    font-size: 50px;
+    color: #F7EDE2;
+    text-shadow: 2px 2px 5px #84A59D;  
+    margin-top: 20px;
+}
+.hd p{
+    text-align: justify;
+    color: #F7EDE2;
+    font-size: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    margin-bottom: 220px;
+}
+.card{
+    background-color: rgb(53, 64, 85, 0.4);
+    color: #F7EDE2;
+    box-shadow: 10px 10px 5px rgb(125, 78, 87, 0.4);
+    margin-bottom: 10px;
+}
+.btn{
+    font-size: 15px;
+    font-family:'Chakra Petch', sans-serif;;
+    width: 120px;
+    height: 35px;
+    border-radius: 9px;
+    background-color: #D66853;
+    border: none;
+    color: #F7EDE2;
+    transition: all 0.3s;
+    margin-top: 20px;
+}

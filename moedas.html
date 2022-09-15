@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <title>Conversor</title>
+</head>
+<body>
+    <header>
+        <h1>Conversor de Moedas</h1>
+        <p>Dólar nos últimos meses: US$ 5.21</p>
+        <p>Euro nos últimos meses: US$ 5.24</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <h3>Insira o valor:</h3>
+                <button class="buttonConv" type="submit" onclick="Converter()">Dólar</button>
+                <button class="buttonConv" type="submit" onclick="Converter()">Real</button>
+                <button class="buttonConv" type="submit" onclick="Converter()">Euro</button>
+                <input type="number" id="resultado" size="2">
+                <button class="buttonConv" type="submit" onclick="Converter()">Dólar</button>
+                <button class="buttonConv" type="submit" onclick="Converter()">Real</button>
+                <button class="buttonConv" type="submit" onclick="Converter()">Euro</button>
+                <p id="convertido"></p> 
+                <button class="buttonConv" type="submit" onclick="Converter()">Converter</button>
+                 
+            </div>
+        </div>
+        <script>
+            function Converter(){
+                var resultadoElemento = document.getElementById ('resultado');//Pega o id
+                var resultado = resultadoElemento.value;//Pega só o valor do id
+                var resultadoEmReal = parseFloat (resultado);//Converte de string para float
+                var resultadoEmDolar = resultadoEmReal / 5.21;// converte para dólar
+                //
+                //
+                var conversãoElemento = document.getElementById ('convertido');
+                var conversão = "US$" + resultadoEmDolar;
+                conversãoElemento.innerHTML = conversão;//mostra o valor
+            }
+        </script> 
+    </main>
+</body>
+</html>
