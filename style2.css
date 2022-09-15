@@ -40,6 +40,21 @@ p{
 input{
     font-family: 'Chakra Petch', sans-serif;
 }
+.checklist label{
+    font-size: 25px;
+    font-family:'Chakra Petch', sans-serif;;
+    width: 50px;
+    height: 35px;
+    border-radius: 9px;
+    border: none;
+    color: #F7EDE2;
+    transition: all 0.3s;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.checklist input:checked{
+    background-color: rgb(134, 134, 134);
+}
 .buttonConv{
     font-size: 20px;
     font-family:'Chakra Petch', sans-serif;;
@@ -54,22 +69,6 @@ input{
 }
 .buttonConv:hover{
     background-color: #7D4E57;
-    color: #0C0F0A;
-}
-.buttonRV{
-    font-size: 20px;
-    font-family:'Chakra Petch', sans-serif;;
-    width: 280px;
-    height: 35px;
-    border-radius: 9px;
-    background-color: #F62DAE;
-    border: none;
-    color: #F7EDE2;
-    transition: all 0.3s;
-    margin-top: 20px;
-}
-.buttonRV:hover{
-    background-color: #5CF64A;
     color: #0C0F0A;
 }
 #resultado{

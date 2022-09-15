@@ -20,29 +20,59 @@
         <div class="container">
             <div class="row">
                 <h3>Insira o valor:</h3>
-                <button class="buttonConv" type="submit" onclick="Converter()">Dólar</button>
-                <button class="buttonConv" type="submit" onclick="Converter()">Real</button>
-                <button class="buttonConv" type="submit" onclick="Converter()">Euro</button>
+                <div class="checklist">
+                    <input type="checkbox" id="dólar1" name="dólar"><label for="dólar1">Dólar</label>
+                    <input type="checkbox" id="real1" name="dólar"><label for="real1">Real</label>
+                    <input type="checkbox" id="euro1" name="dólar"><label for="euro1">Euro</label>
+                </div>
+                
+
+
                 <input type="number" id="resultado" size="2">
-                <button class="buttonConv" type="submit" onclick="Converter()">Dólar</button>
-                <button class="buttonConv" type="submit" onclick="Converter()">Real</button>
-                <button class="buttonConv" type="submit" onclick="Converter()">Euro</button>
+                
+
+
+                <button class="buttonConv" type="submit" onclick="Converter()">Dólar</button> 
+                <button class="buttonConv" type="submit" onclick="Converter()">Real</button> 
+                <button class="buttonConv" type="submit" onclick="Converter()">Euro</button> 
+
+
                 <p id="convertido"></p> 
-                <button class="buttonConv" type="submit" onclick="Converter()">Converter</button>
-                 
+
+
+                
             </div>
         </div>
         <script>
-            function Converter(){
+            function ConverterDólar(){
                 var resultadoElemento = document.getElementById ('resultado');//Pega o id
                 var resultado = resultadoElemento.value;//Pega só o valor do id
-                var resultadoEmReal = parseFloat (resultado);//Converte de string para float
-                var resultadoEmDolar = resultadoEmReal / 5.21;// converte para dólar
+                var valor = parseFloat (resultado);//Converte de string para float
+                if (document.getElementById('dólar'))
+                {
+                    var resultadoFinal = "Mesmo valor";
+
+                }
+                if (document.getElementById('real'))
+                {
+                    var resultadoFinal = valor * 5.21;
+
+                }
+                if (document.getElementById('euro'))
+                {
+                    var resultadoFinal = valor;
+
+                }
+                // converte para dólar
                 //
                 //
                 var conversãoElemento = document.getElementById ('convertido');
-                var conversão = "US$" + resultadoEmDolar;
+                var conversão = resultadoFinal;
                 conversãoElemento.innerHTML = conversão;//mostra o valor
+            }
+            function MostrarValor (valor){
+                var valor = document.getElementById ('resultado').innerHTML;
+                document.getElementById ('resultado').innerHTML = numero + num;
             }
         </script> 
     </main>
