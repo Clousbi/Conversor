@@ -38,6 +38,7 @@
 
 
                 <p id="convertido"></p> 
+                <a href="principal.html"><button class="buttonConv" type="submit">Voltar</button> </a>
 
 
                 
@@ -73,6 +74,32 @@
             function MostrarValor (valor){
                 var valor = document.getElementById ('resultado').innerHTML;
                 document.getElementById ('resultado').innerHTML = numero + num;
+            }
+
+
+            //
+            var dolar;
+            var euro;
+            function cotacaoEuro() {
+            fetch(`https://economia.awesomeapi.com.br/json/last/eur`)
+                .then(response => {
+                    return response.json()
+                        .then((data) => {
+                            euro = data.EURBRL.high
+                        });
+                }).then((data) => {
+                }).catch((err) => { });
+            }
+
+            function cotacaoDolar() {
+            fetch(`https://economia.awesomeapi.com.br/json/last/usd`)
+                .then(response => {
+                    return response.json()
+                        .then((data) => {
+                            dolar = data.USDBRL.high
+                        });
+                }).then((data) => {
+                }).catch((err) => { });
             }
         </script> 
     </main>

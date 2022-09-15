@@ -50,10 +50,13 @@ input{
     color: #F7EDE2;
     transition: all 0.3s;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
-.checklist input:checked{
-    background-color: rgb(134, 134, 134);
+.checklist input{
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    
 }
 .buttonConv{
     font-size: 20px;
@@ -88,7 +91,7 @@ input{
     height: 40px;
     margin: 2px;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 2mm;
     color: #d6d6d6;
     text-align: right;

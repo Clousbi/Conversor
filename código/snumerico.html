@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <title>Conversor</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema Numérico</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <h3>Insira o valor:</h3>
+                <div class="checklist">
+                    <input type="checkbox" id="binário" name="sistema"><label for="binário">Binário</label>
+                    <input type="checkbox" id="Octal" name="sistema"><label for="Octal">Octal</label>
+                    <input type="checkbox" id="decimal" name="sistema"><label for="decimal">Decimal</label>
+                    <input type="checkbox" id="hexadecimal" name="sistema"><label for="hexadecimal">Hexadecimal</label>
+                </div>
+                
+
+
+                <input type="number" id="resultado" size="2">
+                
+
+
+                <button class="buttonConv" type="submit" onclick="Converter()">Binário</button> 
+                <button class="buttonConv" type="submit" onclick="Converter()">Octal</button> 
+                <button class="buttonConv" type="submit" onclick="Converter()">Decimal</button> 
+                <button class="buttonConv" type="submit" onclick="Converter()">Hexadecimal</button> 
+
+
+                <p id="convertido"></p> 
+                <a href="principal.html"><button class="buttonConv" type="submit">Voltar</button> </a>
+
+
+                
+            </div>
+        </div>
+        <script>
+            function ConverterDólar(){
+                var resultadoElemento = document.getElementById ('resultado');//Pega o id
+                var resultado = resultadoElemento.value;//Pega só o valor do id
+                var valor = parseFloat (resultado);//Converte de string para float
+                if (document.getElementById('dólar'))
+                {
+                    var resultadoFinal = "Mesmo valor";
+
+                }
+                if (document.getElementById('real'))
+                {
+                    var resultadoFinal = valor * 5.21;
+
+                }
+                if (document.getElementById('euro'))
+                {
+                    var resultadoFinal = valor;
+
+                }
+                // converte para dólar
+                //
+                //
+                var conversãoElemento = document.getElementById ('convertido');
+                var conversão = resultadoFinal;
+                conversãoElemento.innerHTML = conversão;//mostra o valor
+            }
+            function MostrarValor (valor){
+                var valor = document.getElementById ('resultado').innerHTML;
+                document.getElementById ('resultado').innerHTML = numero + num;
+            }
+        </script> 
+    </main>
+</body>
+</html>
